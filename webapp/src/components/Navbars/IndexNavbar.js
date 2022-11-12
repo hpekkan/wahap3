@@ -108,10 +108,10 @@ export default function IndexNavbar() {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim"
+                href="https://twitter.com/TobbEtuChain?t=3jUuSShqpKujdZ4kWTgBHA&s=09"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Follow us on Twitter"
+                title="Twitter ile bizden haberdar olun"
               >
                 <i className="fab fa-twitter" />
                 <p className="d-lg-none d-xl-none">Twitter</p>
@@ -120,58 +120,28 @@ export default function IndexNavbar() {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim"
+                href="https://discord.gg/RPy4ztHg"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Like us on Facebook"
+                title="Discord'da bize katılın"
               >
-                <i className="fab fa-facebook-square" />
-                <p className="d-lg-none d-xl-none">Facebook</p>
+                <i className="fab fa-discord" />
+                <p className="d-lg-none d-xl-none">Discord</p>
               </NavLink>
             </NavItem>
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
+                href="https://www.instagram.com/tobbetublockchain/?igshid=YmMyMTA2M2Y%3D"
                 rel="noopener noreferrer"
                 target="_blank"
-                title="Follow us on Instagram"
+                title="Instagram'da takipte kalın"
               >
                 <i className="fab fa-instagram" />
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav>
-              <DropdownToggle
-                caret
-                color="default"
-                data-toggle="dropdown"
-                href="#pablo"
-                nav
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
-              </DropdownToggle>
-              <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
-                  <i className="tim-icons icon-paper" />
-                  Documentation
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/register-page">
-                  <i className="tim-icons icon-bullet-list-67" />
-                  Register Page
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/landing-page">
-                  <i className="tim-icons icon-image-02" />
-                  Landing Page
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/profile-page">
-                  <i className="tim-icons icon-single-02" />
-                  Profile Page
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            
             <NavItem>
               <Button
                 className="nav-link d-none d-lg-block"
