@@ -6,7 +6,6 @@ import Footer from "components/Footer/Footer.js";
 
 import Giris from "views/IndexSections/Giris.js"
 import NucleoIcons from "views/IndexSections/NucleoIcons.js";
-import Examples from "views/IndexSections/Examples.js";
 import Download from "views/IndexSections/Download.js";
 
 export default function Index() {
@@ -26,7 +25,6 @@ export default function Index() {
           <Giris />
           <Download />
           <NucleoIcons />
-          <Examples />
         </div>
         <Footer />
       </div>
