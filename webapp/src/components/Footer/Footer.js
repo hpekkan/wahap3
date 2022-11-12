@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import {
   Button,
@@ -50,7 +49,7 @@ export default function Footer() {
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
                 color="default"
-                href="https://discord.com/invite/HhXhwpYG"
+                href="https://discord.gg/RPy4ztHg"
                 id="tooltip318450378"
                 target="_blank"
               >
