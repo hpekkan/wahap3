@@ -32,10 +32,11 @@ export default function Index() {
       // Create a new instance of the Contract with a Signer, which allows
       // update methods
       const certificate = new Contract(CERTIFICATE_CONTRACT_ADDRESS, abi, signer);
+      setLoading(true);
+
       // call the presaleMint from the contract, only whitelisted addresses would be able to mint
       const tx = await certificate.issueCertificate(
         "name_of_issuer","asd","asd",0,"asd","asd");
-      setLoading(true);
       // wait for the transaction to get mined
       await tx.wait();
       setLoading(false);
@@ -52,15 +53,15 @@ export default function Index() {
       // Create a new instance of the Contract with a Signer, which allows
       // update methods
       const certificate = new Contract(CERTIFICATE_CONTRACT_ADDRESS, abi, signer);
-      // call the presaleMint from the contract, only whitelisted addresses would be able to mint
-      const tx = await certificate.verifyCertificate(
-        "name_of_issuer","asd","asd",0,"asd","asd");
       setLoading(true);
+
+      const res = await certificate.verifyCertificate("name_of_issuer","asd","asd",0,"asd","asd");
+      // call the presaleMint from the contract, only whitelisted addresses would be able to mint
       // wait for the transaction to get mined
-      await tx.wait();
+      //await tx.wait();
       setLoading(false);
       setisSubmitted(true);
-      setformSubmitStatus(true);
+      setformSubmitStatus(res);
     } catch (err) {
       console.error(err);
     }
@@ -247,7 +248,10 @@ const handleClick4 = async () => {
               >
                 Belge Sorgula
               </Button>
-            </Row></div>)}
+            </Row>{Loading&&(<Row className="justify-content-center">    <div><p>Loading...</p></div></Row>)}
+            {isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-success mt-2">Doğrulama Başarılı!</p></div></Row>)}
+            {!isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-fanger mt-2">Doğrulama Başarısız!</p></div></Row>)}
+             </div>)}
             {isSelected && walletConnected && (<div>
             <Form  name="FORM" handleClick={handleClick2}/>
           <Row className="justify-content-center">    
@@ -260,7 +264,10 @@ const handleClick4 = async () => {
               >
                 Belge Ekle
               </Button>
-            </Row></div>)}
+            </Row>{Loading&&(<Row className="justify-content-center">    <div><p>Loading...</p></div></Row>)}
+            {isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-success mt-2">Belge Ekleme Başarılı!</p></div></Row>)}
+            {isSubmitted && !formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-danger mt-2">Belge Ekleme Başarısız!</p></div></Row>)}
+            </div>)}
           
           <Koleksiyon />
         </div>
