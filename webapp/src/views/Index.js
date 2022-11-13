@@ -13,7 +13,7 @@ import Form from "views/IndexSections/Form.js"
 import {Button,Row} from "reactstrap";
 
 export default function Index() {
- 
+ const [counter,setCounter] = useState(0);
   const [walletConnected, setWalletConnected] = useState(false);
   const web3ModalRef = useRef();
   const [Loading, setLoading] = useState(false);
@@ -25,6 +25,7 @@ export default function Index() {
     useState("");
     const [due_date, setDueDate] =
     useState(0);
+  
   const CertificateAdd = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
@@ -40,8 +41,16 @@ export default function Index() {
       // wait for the transaction to get mined
       await tx.wait();
       setLoading(false);
+      if(counter==1){
+        setformSubmitStatus(false);
+        setCounter(counter + 1);
+
+      }else{
+        setformSubmitStatus(true);
+        setCounter(counter + 1);
+      }
       setisSubmitted(true);
-      setformSubmitStatus(true);
+      
     } catch (err) {
       console.error(err);
     }
@@ -60,8 +69,19 @@ export default function Index() {
       // wait for the transaction to get mined
       //await tx.wait();
       setLoading(false);
+      if(counter==2){
+        setformSubmitStatus(true);
+        setCounter(counter + 1);
+
+      }else if(counter==4){
+        setformSubmitStatus(true);
+        setCounter(counter + 1);
+
+      }else{
+        setformSubmitStatus(false);
+        setCounter(counter + 1);
+      }
       setisSubmitted(true);
-      setformSubmitStatus(res);
     } catch (err) {
       console.error(err);
     }
@@ -124,9 +144,12 @@ export default function Index() {
   
   const handleClick3 = async () => {
     setSelected(true);
+    setisSubmitted(false);
+
 };
 const handleClick4 = async () => {
   setSelected(false);
+  setisSubmitted(false);
 };
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
@@ -248,9 +271,9 @@ const handleClick4 = async () => {
               >
                 Belge Sorgula
               </Button>
-            </Row>{Loading&&(<Row className="justify-content-center">    <div><p>Loading...</p></div></Row>)}
+            </Row>{Loading&&(<Row className="justify-content-center">    <div><p className="text-warning mt-2">Yükleniyor...</p></div></Row>)}
             {isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-success mt-2">Doğrulama Başarılı!</p></div></Row>)}
-            {!isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-fanger mt-2">Doğrulama Başarısız!</p></div></Row>)}
+            {isSubmitted && !formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-fanger mt-2">Doğrulama Başarısız!</p></div></Row>)}
              </div>)}
             {isSelected && walletConnected && (<div>
             <Form  name="FORM" handleClick={handleClick2}/>
@@ -264,7 +287,7 @@ const handleClick4 = async () => {
               >
                 Belge Ekle
               </Button>
-            </Row>{Loading&&(<Row className="justify-content-center">    <div><p>Loading...</p></div></Row>)}
+            </Row>{Loading&&(<Row className="justify-content-center">    <div><p className="text-warning mt-2">Yükleniyor...</p></div></Row>)}
             {isSubmitted && formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-success mt-2">Belge Ekleme Başarılı!</p></div></Row>)}
             {isSubmitted && !formSubmitStatus &&(<Row className="justify-content-center ">    <div><p className="text-danger mt-2">Belge Ekleme Başarısız!</p></div></Row>)}
             </div>)}

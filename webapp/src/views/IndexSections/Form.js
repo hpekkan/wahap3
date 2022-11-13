@@ -37,7 +37,7 @@ export default function Form(props) {
                     <p>Belgenin Verilme Zamanı</p>  
                     </ Col>
                     <Col >
-                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
+                    <Input defaultValue="" placeholder="dd/ss/gg/aa/yyyy" type="text" />
                     </Col>
                     <br></br>
                 </Row>
@@ -47,7 +47,7 @@ export default function Form(props) {
                     <p>Belgenin Geçerlilik Tarihi</p>  
                     </ Col>
                     <Col >
-                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
+                    <Input defaultValue="" placeholder="dd/ss/gg/aa/yyyy" type="text" />
                     </Col>
                     <br></br>
                 </Row>
