@@ -9,6 +9,7 @@ import Footer from "components/Footer/Footer.js";
 import Giris from "views/IndexSections/Giris.js"
 import Koleksiyon from "views/IndexSections/Koleksiyon.js";
 import CuzdaniBagla from "views/IndexSections/CuzdaniBagla.js";
+import Form from "views/IndexSections/Form.js"
 
 
 export default function Index() {
@@ -65,8 +66,6 @@ export default function Index() {
         await connectWallet();
         setWalletConnected(true);
       }
-    
-    console.log("qweqw");
    };
 
    
@@ -97,7 +96,7 @@ export default function Index() {
           <Giris />
           
           <CuzdaniBagla  name="BAĞLAN" handleClick={handleClick}/>
-          <CuzdaniBagla  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
+          <Form  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
           <Koleksiyon />
         </div>
         <Footer />
@@ -112,7 +111,7 @@ export default function Index() {
         <div className="main">
           <Giris />
           
-          <CuzdaniBagla  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
+          <Form  name="FORM" handleClick={handleClick2}/>
           <Koleksiyon />
         </div>
         <Footer />
