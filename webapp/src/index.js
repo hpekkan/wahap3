@@ -6,7 +6,7 @@ import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss";
 import "assets/demo/demo.css";
 
-import Index from "views/index.js";
+import Index from "views/Index.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
