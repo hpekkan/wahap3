@@ -45,6 +45,26 @@ export default function Index() {
       console.error(err);
     }
   };
+  const CertificateVerify = async () => {
+    try {
+      // We need a Signer here since this is a 'write' transaction.
+      const signer = await getProviderOrSigner(true);
+      // Create a new instance of the Contract with a Signer, which allows
+      // update methods
+      const certificate = new Contract(CERTIFICATE_CONTRACT_ADDRESS, abi, signer);
+      // call the presaleMint from the contract, only whitelisted addresses would be able to mint
+      const tx = await certificate.verifyCertificate(
+        "name_of_issuer","asd","asd",0,"asd","asd");
+      setLoading(true);
+      // wait for the transaction to get mined
+      await tx.wait();
+      setLoading(false);
+      setisSubmitted(true);
+      setformSubmitStatus(true);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   
   const getProviderOrSigner = async (needSigner = false) => {
     // Connect to Metamask
@@ -160,7 +180,7 @@ const handleClick4 = async () => {
                 color="red"
                 role="button"
                 size="lg"
-                onClick={CertificateAdd}
+                onClick={CertificateVerify}
               >
                 Sertifika Sorgula
               </Button>
@@ -223,7 +243,7 @@ const handleClick4 = async () => {
                 color="red"
                 role="button"
                 size="lg"
-                onClick={CertificateAdd}
+                onClick={CertificateVerify}
               >
                 Sertifika Sorgula
               </Button>
