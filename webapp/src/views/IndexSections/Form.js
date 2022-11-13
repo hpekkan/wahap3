@@ -11,29 +11,56 @@ export default function Form(props) {
             <br></br>
 
             <Container>
-                    <p>Yayınlayan kişi:</p>                
-                    <Input defaultValue="" placeholder="Regular" type="text" class="text-white bg-dark" />
+                <Row>
+                    <Col md="3" >
+                    <p>Yayınlanan Kişinin Public Keyi</p> 
+                    </Col>
+                    <Col >
+                    <Input defaultValue="" placeholder="Public Key Giriniz" type="text" class="text-white bg-dark" />
+                    </Col>
                     <br></br>
+                </Row>
 
-                    <p>Yayınlayan kişi:</p>  
-                    <Input defaultValue="" placeholder="Regular" type="text" />
+                <Row className="mt-3">
+                    < Col md="3" >
+                    <p>Yayınlanan Kişinin TC'si</p>  
+                    </ Col>
+                    <Col >
+                    <Input defaultValue="" placeholder="TC giriniz" type="text" />
                     <br></br>
+                    </Col>
+                </Row>
 
-                    <p>Yayınlayan kişi:</p>  
-                    <Input defaultValue="" placeholder="Regular" type="text" />
-                    <br></br>
 
-                    <p>Yayınlayan kişi:</p>  
-                    <Input defaultValue="" placeholder="Regular" type="text" />
+                <Row className="mt-1">
+                    < Col md="3" >
+                    <p>Belgenin Verilme Zamanı</p>  
+                    </ Col>
+                    <Col >
+                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
+                    </Col>
                     <br></br>
+                </Row>
+                
+                <Row className="mt-3">
+                    < Col md="3" >
+                    <p>Belgenin Geçerlilik Tarihi</p>  
+                    </ Col>
+                    <Col >
+                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
+                    </Col>
+                    <br></br>
+                </Row>
 
-                    <p>Yayınlayan kişi:</p>  
-                    <Input defaultValue="" placeholder="Regular" type="text" />
+                <Row className="mt-3">
+                    < Col md="3" >
+                    <p>PDF Olarak Belge</p>  
+                    </ Col>
+                    <Col >
+                    <input type="file" id="myfile" name="myfile" data-buttonText="Your label here." ></input>
+                    </Col>
                     <br></br>
-
-                    <p>Yayınlayan kişi:</p>  
-                    <Input defaultValue="" placeholder="Regular" type="text" />
-                    <br></br>
+                </Row>
 
            
            <br></br>
