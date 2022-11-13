@@ -15,8 +15,8 @@ export default function Index() {
  
   const [walletConnected, setWalletConnected] = useState(false);
   const web3ModalRef = useRef();
-  
-  
+  const [isSubmitted, setisSubmitted] = useState(false);
+ 
   const getProviderOrSigner = async (needSigner = false) => {
     // Connect to Metamask
     // Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
@@ -48,7 +48,9 @@ export default function Index() {
       console.error(err);
     }
   };
- 
+  
+  
+
   const handleClick = async () => {
     
       // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet

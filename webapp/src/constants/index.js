@@ -1,4 +1,4 @@
-export const WHITELIST_CONTRACT_ADDRESS = "0x2d727438882e941ab5A6Fc88A76ef2c05f1600dD";
+export const CERTIFICATE_CONTRACT_ADDRESS = "0x2d727438882e941ab5A6Fc88A76ef2c05f1600dD";
 export const abi = [
 	{
 		"anonymous": false,

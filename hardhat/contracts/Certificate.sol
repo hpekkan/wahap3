@@ -1,40 +1,27 @@
+// SPDX-License-Identifier: MIT
 // Certificate.sol
 
 pragma solidity ^0.8.7;
 
-import './Ownable.sol';
+contract Certificate {
+  mapping (bytes32 => string[2]) public records;
 
-contract Certificate is Ownable {
-  mapping (bytes32 => address) public records;
-  mapping (address => bytes32[]) public nfts;
+  event CertificateIssued(bytes32 indexed record, uint256 timestamp);
 
-  event CertificateIssued(bytes32 indexed record, uint256 timestamp, bool returnValue);
-
-  function issueCertificate(string calldata name, string calldata details) external onlyOwner {
-    bytes32 certificate = keccak256(abi.encodePacked(name, details));
-    require(certificate != keccak256(abi.encodePacked("")));
-    records[certificate] = msg.sender;
-    nfts[msg.sender].push(certificate);
-    emit CertificateIssued(certificate, block.timestamp, true);
+  function issueCertificate(string calldata name_of_issuer, string calldata name_of_issued, string calldata name_of_event, 
+                            uint time, string calldata hash_of_document, string calldata ipfs_of_document) external {
+    bytes32 certificate_id = keccak256(abi.encodePacked(name_of_issuer, name_of_issued, name_of_event, time));
+    require(certificate_id != keccak256(abi.encodePacked("")));
+    records[certificate_id] = [hash_of_document, ipfs_of_document];
+    emit CertificateIssued(certificate_id, block.timestamp);
   }
 
-  function owningAuthority() external view returns (address) {
-    return owner;
-  }
+  function verifyCertificate(string calldata name_of_issuer, string calldata name_of_issued, string calldata name_of_event, 
+                            uint time, string calldata hash_of_document, string calldata ipfs_of_document) external view returns (bool) {
+    bytes32 certificate_id = keccak256(abi.encodePacked(name_of_issuer, name_of_issued, name_of_event, time));
 
-  function getAllNFTs(address caller) public view returns (bytes32[] memory) {
-    return nfts[caller];
-  }
-
-  function verifyCertificate(string calldata name, string calldata details, bytes32 certificate) external view returns (bool) {
-    bytes32 certificate2 = keccak256(abi.encodePacked(name, details));
-    // are certificates the same?
-    if (certificate == certificate2) {
-      // does the certificate exist on the blockchain?
-      if (records[certificate] == owner) {
-        return true;
-      }
+    if (records[certificate_id].length == 0 || keccak256(bytes(records[certificate_id][0]))    != keccak256(bytes(hash_of_document)) ) 
+        return false;
+    return true;
     }
-    return false;
   }
-}
