@@ -124,8 +124,8 @@ export default function Index() {
           <Giris />
           
           <CuzdaniBagla  name="BAĞLAN" handleClick={handleClick}/>
-          <Row className="justify-content-center">  
-          <Form  name="FORM" handleClick={handleClick2}/> </Row>
+          
+          <Form  name="FORM" handleClick={handleClick2}/>
           <Row className="justify-content-center">    
             <Button
                 className="btn-round"
@@ -151,8 +151,8 @@ export default function Index() {
         <PageHeader />
         <div className="main">
           <Giris />
-          <Row className="justify-content-center">  
-          <Form  name="FORM" handleClick={handleClick2}/> </Row>
+          
+          <Form  name="FORM" handleClick={handleClick2}/> 
           <Row className="justify-content-center">    
             <Button
                 className="btn-round"
