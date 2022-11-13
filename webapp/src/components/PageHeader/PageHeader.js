@@ -15,7 +15,7 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-          <h1 className="h1-seo"> Nitelikli Sertifika Tapusu</h1>
+          <h1 className="h1-seo text-warning"> Nitelikli <br></br>Belge <br></br>Tapusu</h1>
           <h3 className="d-none d-sm-block">
             Elektronik belgeleri yayımlamanın ve Doğruluğunu sağlamanın kolay yolu ...
           </h3>

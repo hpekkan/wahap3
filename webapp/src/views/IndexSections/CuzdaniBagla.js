@@ -16,11 +16,11 @@ export default function CuzdaniBagla(props) {
       <Container>
         <Row className="justify-content-md-center">
           <Col className="text-center" lg="8" md="12">
-            <h1 className="title">
-              METAMESK CUZDANIMI BAĞLA
+            <h1 className="title text-warning">
+              METAMASK CUZDANIMI BAĞLA
             </h1>
             <h2 className="description">
-              Belgelere erişmek için Metamesk Cüzdanınızı bağlayın.
+              Belge eklemek veya Belge koleksiyonunuza erişmek için Metamask Cüzdanınızı bağlayın.
             </h2>
           </Col>
           <Col className="text-center" lg="8" md="12">

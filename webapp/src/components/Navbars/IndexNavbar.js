@@ -59,7 +59,7 @@ export default function IndexNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand">
-            <span>NST-</span>
+            <span>NBT-</span>
             Doğrulama ve Yayımlama sistemi
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">

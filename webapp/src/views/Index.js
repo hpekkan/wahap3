@@ -139,7 +139,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={handleClick4}
               >
-                Sertifika Sorgula
+                Belge Sorgula
               </Button>
           <Button
                 className="btn-round"
@@ -148,7 +148,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={handleClick3}
               >
-                Sertifika Ekle
+                Belge Ekle
               </Button>  
                 
           </Row>
@@ -162,7 +162,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Sertifika Sorgula
+                Belge Sorgula
               </Button>
             </Row></div>)}
             {isSelected && walletConnected && (<div>
@@ -175,7 +175,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Sertifika Ekle
+                Belge Ekle
               </Button>
             </Row></div>)}
           
@@ -202,7 +202,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={handleClick4}
               >
-                Sertifika Sorgula
+                Belge Sorgula
               </Button>   
           <Button
                 className="btn-round"
@@ -211,7 +211,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={handleClick3}
               >
-                Sertifika Ekle
+                Belge Ekle
               </Button>  
               
           </Row>
@@ -225,7 +225,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Sertifika Sorgula
+                Belge Sorgula
               </Button>
             </Row></div>)}
             {isSelected && walletConnected && (<div>
@@ -238,7 +238,7 @@ const handleClick4 = async () => {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Sertifika Ekle
+                Belge Ekle
               </Button>
             </Row></div>)}
           

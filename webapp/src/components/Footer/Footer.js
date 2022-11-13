@@ -14,7 +14,7 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md="4">
-            <h1 className="title">&nbsp;Nitelikli Sertifika &nbsp;Tapusu</h1>
+            <h1 className="title">&nbsp;Nitelikli Belge &nbsp;Tapusu</h1>
           </Col>
           <Col md="5">
           </Col>
