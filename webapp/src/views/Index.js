@@ -1,14 +1,14 @@
 import React from "react";
 import Web3Modal from "web3modal";
-import { providers, Contract } from "ethers";
-import { useEffect, useRef, useState } from "react";
+import { providers } from "ethers";
+import {  useRef, useState } from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import PageHeader from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
 
 import Giris from "views/IndexSections/Giris.js"
-import NucleoIcons from "views/IndexSections/NucleoIcons.js";
-import Download from "views/IndexSections/Download.js";
+import Koleksiyon from "views/IndexSections/Koleksiyon.js";
+import CuzdaniBagla from "views/IndexSections/CuzdaniBagla.js";
 
 
 export default function Index() {
@@ -94,9 +94,9 @@ export default function Index() {
         <div className="main">
           <Giris />
           
-          <Download  name="BAĞLAN" handleClick={handleClick}/>
-          <Download  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
-          <NucleoIcons />
+          <CuzdaniBagla  name="BAĞLAN" handleClick={handleClick}/>
+          <CuzdaniBagla  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
+          <Koleksiyon />
         </div>
         <Footer />
       </div>
@@ -110,8 +110,8 @@ export default function Index() {
         <div className="main">
           <Giris />
           
-          <Download  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
-          <NucleoIcons />
+          <CuzdaniBagla  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
+          <Koleksiyon />
         </div>
         <Footer />
       </div>

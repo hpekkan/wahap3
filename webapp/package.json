@@ -1,35 +1,23 @@
 {
-  "name": "blk-design-system-react",
-  "version": "1.2.1",
-  "description": "React version of BLK Design System by Creative Tim",
+  "name": "wahap",
+  "version": "3.0",
+  "description": "Digiathon project",
   "main": "index.js",
-  "author": "Creative Tim",
-  "license": "MIT",
+  "author": "team_wahap",
+  "license": "none",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/blk-design-system-react.git"
+    "url": "https://github.com/hpekkan/wahap3.git"
   },
   "bugs": {
-    "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
+    "url": "https://github.com/hpekkan/wahap3/issues"
   },
-  "homepage": "https://demos.creative-tim.com/blk-design-system-react/#/",
+  "homepage": "https://wahap/components",
   "keywords": [
     "react",
     "reactjs",
-    "blk",
-    "blk-react",
-    "design",
-    "design-react",
-    "system",
-    "system-react",
-    "design-system",
-    "design-system-react",
-    "blk-design",
-    "blk-design-react",
-    "blk-system",
-    "blk-system-react",
-    "blk-design-system",
-    "blk-design-system-react"
+    "react-component",
+    "digiathon"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "5.16.4",

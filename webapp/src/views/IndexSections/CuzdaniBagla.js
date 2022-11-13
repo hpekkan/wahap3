@@ -4,7 +4,7 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-export default function Download(props) {
+export default function CuzdaniBagla(props) {
   
   return (
     <div

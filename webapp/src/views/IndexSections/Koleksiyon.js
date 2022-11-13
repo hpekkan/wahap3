@@ -2,7 +2,7 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-export default function NucleoIcons() {
+export default function Koleksiyon() {
   return (
     <div className="section section-nucleo-icons">
       <img alt="..." className="path" src={require("assets/img/path3.png")} />
