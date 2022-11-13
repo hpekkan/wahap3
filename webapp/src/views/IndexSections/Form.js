@@ -1,7 +1,7 @@
 import React from "react";
 import {Input ,Button, Container, Row, Col } from "reactstrap";
 
-export default function Form() {
+export default function Form(props) {
     return (
         <div>
             <br></br>
@@ -11,33 +11,34 @@ export default function Form() {
             <br></br>
 
             <Container>
-                    <Col lg="10" md="12"></Col>
-                Yayınlayan kişi:
+                    <p>Yayınlayan kişi:</p>                
+                    <Input defaultValue="" placeholder="Regular" type="text" class="text-white bg-dark" />
+                    <br></br>
+
+                    <p>Yayınlayan kişi:</p>  
                     <Input defaultValue="" placeholder="Regular" type="text" />
-                Yayınlayan kişi:
+                    <br></br>
+
+                    <p>Yayınlayan kişi:</p>  
                     <Input defaultValue="" placeholder="Regular" type="text" />
-                    Yayınlayan kişi:
+                    <br></br>
+
+                    <p>Yayınlayan kişi:</p>  
                     <Input defaultValue="" placeholder="Regular" type="text" />
-                    Yayınlayan kişi:
+                    <br></br>
+
+                    <p>Yayınlayan kişi:</p>  
                     <Input defaultValue="" placeholder="Regular" type="text" />
-                    Yayınlayan kişi:
+                    <br></br>
+
+                    <p>Yayınlayan kişi:</p>  
                     <Input defaultValue="" placeholder="Regular" type="text" />
-                    Yayınlayan kişi:
-                    <Input defaultValue="" placeholder="Regular" type="text" />
+                    <br></br>
+
            
            <br></br>
            
-            <Row className="justify-content-center">    
-            <Button
-              className="btn-round"
-              color="red"
-              role="button"
-              size="lg"
-            >
-              Onayla
-            </Button>
-            </Row>
-
+          
         
       </Container>
         </div>

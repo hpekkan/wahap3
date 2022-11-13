@@ -16,12 +16,12 @@ export default function CuzdaniBagla(props) {
       <Container>
         <Row className="justify-content-md-center">
           <Col className="text-center" lg="8" md="12">
-            <h2 className="title">
+            <h1 className="title">
               METAMESK CUZDANIMI BAĞLA
-            </h2>
-            <h4 className="description">
+            </h1>
+            <h2 className="description">
               Sertifikalara erişmek için Metamesk Cüzdanınızı bağlayın.
-            </h4>
+            </h2>
           </Col>
           <Col className="text-center" lg="8" md="12">
             <Button
