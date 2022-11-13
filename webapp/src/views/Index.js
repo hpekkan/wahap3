@@ -19,8 +19,8 @@ export default function Index() {
   const [Loading, setLoading] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false);
   const [formSubmitStatus, setformSubmitStatus] = useState(false);
-  const [name_of_issuer, setNameofIssuer] =
-    useState("");
+  const [name_of_issuer, setNameofIssuer] =useState("");
+  const [isSelected, setSelected] = useState(false);
   const [name_of_issued, setNameofIssued] =
     useState("");
     const [due_date, setDueDate] =
@@ -101,6 +101,12 @@ export default function Index() {
       CertificateAdd();
   };
   
+  const handleClick3 = async () => {
+    setSelected(true);
+};
+const handleClick4 = async () => {
+  setSelected(false);
+};
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
@@ -125,7 +131,29 @@ export default function Index() {
           
           <CuzdaniBagla  name="BAĞLAN" handleClick={handleClick}/>
           
-          <Form  name="FORM" handleClick={handleClick2}/>
+          <Row className="justify-content-center mt-4">  
+          <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={handleClick4}
+              >
+                Sertifika Sorgula
+              </Button>
+          <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={handleClick3}
+              >
+                Sertifika Ekle
+              </Button>  
+                
+          </Row>
+          {!isSelected && (<div>
+            <Form  name="FORM" handleClick={handleClick2}/>
           <Row className="justify-content-center">    
             <Button
                 className="btn-round"
@@ -134,9 +162,22 @@ export default function Index() {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Onayla
+                Sertifika Sorgula
               </Button>
-            </Row>
+            </Row></div>)}
+            {isSelected && walletConnected && (<div>
+            <Form  name="FORM" handleClick={handleClick2}/>
+          <Row className="justify-content-center">    
+            <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={CertificateAdd}
+              >
+                Sertifika Ekle
+              </Button>
+            </Row></div>)}
           
           <Koleksiyon />
         </div>
@@ -152,7 +193,30 @@ export default function Index() {
         <div className="main">
           <Giris />
           
-          <Form  name="FORM" handleClick={handleClick2}/> 
+          
+          <Row className="justify-content-center mt-4" > 
+          <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={handleClick4}
+              >
+                Sertifika Sorgula
+              </Button>   
+          <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={handleClick3}
+              >
+                Sertifika Ekle
+              </Button>  
+              
+          </Row>
+          {!isSelected && (<div>
+            <Form  name="FORM" handleClick={handleClick2}/>
           <Row className="justify-content-center">    
             <Button
                 className="btn-round"
@@ -161,9 +225,23 @@ export default function Index() {
                 size="lg"
                 onClick={CertificateAdd}
               >
-                Onayla
+                Sertifika Sorgula
               </Button>
-            </Row>
+            </Row></div>)}
+            {isSelected && walletConnected && (<div>
+            <Form  name="FORM" handleClick={handleClick2}/>
+          <Row className="justify-content-center">    
+            <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={CertificateAdd}
+              >
+                Sertifika Ekle
+              </Button>
+            </Row></div>)}
+          
           <Koleksiyon />
         </div>
         <Footer />
