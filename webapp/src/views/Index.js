@@ -1,23 +1,51 @@
 import React from "react";
 import Web3Modal from "web3modal";
-import { providers } from "ethers";
+import { providers ,Contract} from "ethers";
 import {  useRef, useState } from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import PageHeader from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
-
+import {CERTIFICATE_CONTRACT_ADDRESS, abi} from "../constants/index.js";
 import Giris from "views/IndexSections/Giris.js"
 import Koleksiyon from "views/IndexSections/Koleksiyon.js";
 import CuzdaniBagla from "views/IndexSections/CuzdaniBagla.js";
 import Form from "views/IndexSections/Form.js"
-
+import {Button,Row} from "reactstrap";
 
 export default function Index() {
  
   const [walletConnected, setWalletConnected] = useState(false);
   const web3ModalRef = useRef();
+  const [Loading, setLoading] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false);
- 
+  const [formSubmitStatus, setformSubmitStatus] = useState(false);
+  const [name_of_issuer, setNameofIssuer] =
+    useState("");
+  const [name_of_issued, setNameofIssued] =
+    useState("");
+    const [due_date, setDueDate] =
+    useState(0);
+  const CertificateAdd = async () => {
+    try {
+      // We need a Signer here since this is a 'write' transaction.
+      const signer = await getProviderOrSigner(true);
+      // Create a new instance of the Contract with a Signer, which allows
+      // update methods
+      const certificate = new Contract(CERTIFICATE_CONTRACT_ADDRESS, abi, signer);
+      // call the presaleMint from the contract, only whitelisted addresses would be able to mint
+      const tx = await certificate.issueCertificate(
+        "name_of_issuer","asd","asd",0,"asd","asd");
+      setLoading(true);
+      // wait for the transaction to get mined
+      await tx.wait();
+      setLoading(false);
+      setisSubmitted(true);
+      setformSubmitStatus(true);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
   const getProviderOrSigner = async (needSigner = false) => {
     // Connect to Metamask
     // Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
@@ -70,7 +98,7 @@ export default function Index() {
 
    
     const handleClick2 = async () => {
-      console.log(web3ModalRef);
+      CertificateAdd();
   };
   
   React.useEffect(() => {
@@ -96,7 +124,20 @@ export default function Index() {
           <Giris />
           
           <CuzdaniBagla  name="BAĞLAN" handleClick={handleClick}/>
-          <Form  name="ÇIKIŞ YAP" handleClick={handleClick2}/>
+          <Row className="justify-content-center">  
+          <Form  name="FORM" handleClick={handleClick2}/> </Row>
+          <Row className="justify-content-center">    
+            <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={CertificateAdd}
+              >
+                Onayla
+              </Button>
+            </Row>
+          
           <Koleksiyon />
         </div>
         <Footer />
@@ -110,8 +151,19 @@ export default function Index() {
         <PageHeader />
         <div className="main">
           <Giris />
-          
-          <Form  name="FORM" handleClick={handleClick2}/>
+          <Row className="justify-content-center">  
+          <Form  name="FORM" handleClick={handleClick2}/> </Row>
+          <Row className="justify-content-center">    
+            <Button
+                className="btn-round"
+                color="red"
+                role="button"
+                size="lg"
+                onClick={CertificateAdd}
+              >
+                Onayla
+              </Button>
+            </Row>
           <Koleksiyon />
         </div>
         <Footer />
