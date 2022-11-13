@@ -69,7 +69,7 @@ export default function Index() {
       // wait for the transaction to get mined
       //await tx.wait();
       setLoading(false);
-      if(counter==2){
+      if(counter==1){
         setformSubmitStatus(true);
         setCounter(counter + 1);
 

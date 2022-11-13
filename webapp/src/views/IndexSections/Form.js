@@ -31,13 +31,22 @@ export default function Form(props) {
                     </Col>
                 </Row>
 
+                <Row className="mt-1">
+                    < Col md="3" >
+                    <p>Belge İsmi</p>  
+                    </ Col>
+                    <Col >
+                    <Input defaultValue="" placeholder="Belge ismi giriniz" type="text" />
+                    <br></br>
+                    </Col>
+                </Row>
 
                 <Row className="mt-1">
                     < Col md="3" >
                     <p>Belgenin Verilme Zamanı</p>  
                     </ Col>
                     <Col >
-                    <Input defaultValue="" placeholder="dd/ss/gg/aa/yyyy" type="text" />
+                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
                     </Col>
                     <br></br>
                 </Row>
@@ -47,7 +56,7 @@ export default function Form(props) {
                     <p>Belgenin Geçerlilik Tarihi</p>  
                     </ Col>
                     <Col >
-                    <Input defaultValue="" placeholder="dd/ss/gg/aa/yyyy" type="text" />
+                    <Input defaultValue="" placeholder="gg/aa/yyyy" type="text" />
                     </Col>
                     <br></br>
                 </Row>
