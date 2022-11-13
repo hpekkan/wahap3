@@ -9,39 +9,18 @@ export default function Koleksiyon() {
       <Container>
         <Row className="justify-content-center">
           <Col lg="8" md="12">
-            <h2 className="title">Sertifika Koleksiyonum</h2>
-            <h4 className="description">
-              BLK• Design System PRO comes with 100 custom icons made by our
-              friends from NucleoApp. The official package contains over 2.100
-              thin icons which are looking great in combination with BLK• Design
-              System PRO Make sure you check all of them and use those that you
-              like the most.
+            <h2 className="title text-warning">Belge Koleksiyonum </h2>
+            <h4 className="description text-white">
+              Blok zincir'e aktarılan bütün belgelerinizin 3 aşamalı güvenlik sistemiyle şifrelenerek sergilendiği ve izinizle paylaşılabildiği bir koleksiyonu görüntüleyin.
             </h4>
             <div className="btn-wrapper">
-              <Button
-                className="btn-round"
-                color="primary"
-                href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/icons"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                View Demo Icons
-              </Button>
-              <Button
-                className="btn-simple btn-round"
-                color="primary"
-                href="https://nucleoapp.com/?ref=1712"
-                rel="noopener noreferrer"
-                size="lg"
-                target="_blank"
-              >
-                Tüm Sertifikaları Gör
-              </Button>
+              
+              
             </div>
           </Col>
         </Row>
         <div className="blur-hover">
-          <a href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/icons">
+          <a href="#">
             <div className="icons-container blur-item on-screen mt-5">
               {/* Center */}
               <i className="icon tim-icons icon-coins" />
@@ -63,7 +42,7 @@ export default function Koleksiyon() {
               <i className="icon tim-icons icon-wallet-43" />
             </div>
             <span className="blur-hidden h5 text-primary">
-              Hepsini getir!
+              Tüm belgeleri getir!
             </span>
           </a>
         </div>

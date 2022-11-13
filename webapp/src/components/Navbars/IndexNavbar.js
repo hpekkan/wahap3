@@ -86,7 +86,7 @@ export default function IndexNavbar() {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
+                  wahap3
                 </a>
               </Col>
               <Col className="collapse-close text-right" xs="6">

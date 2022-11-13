@@ -9,7 +9,7 @@ export default function Giris() {
       <Container>
         <Row className="justify-content-center">
           <Col lg="10" md="12">
-            <h1 className="title text-warning">Sertifika Koleksiyonum</h1>
+            <h1 className="title text-warning">Belge Arşivi</h1>
             <h3 className="description text-white">
               BLK• Design System PRO comes with 100 custom icons made by our
               friends from NucleoApp. The official package contains over 2.100

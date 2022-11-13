@@ -20,7 +20,7 @@ export default function CuzdaniBagla(props) {
               METAMESK CUZDANIMI BAĞLA
             </h1>
             <h2 className="description">
-              Sertifikalara erişmek için Metamesk Cüzdanınızı bağlayın.
+              Belgelere erişmek için Metamesk Cüzdanınızı bağlayın.
             </h2>
           </Col>
           <Col className="text-center" lg="8" md="12">
