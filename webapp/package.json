@@ -36,7 +36,6 @@
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "14.4.1",
     "@truffle/contract": "^4.6.6",
-    "@web3auth/modal": "^3.0.4",
     "bootstrap": "4.5.3",
     "chart.js": "2.9.4",
     "classnames": "2.3.1",
@@ -48,14 +47,15 @@
     "moment": "2.29.4",
     "nouislider": "14.6.3",
     "perfect-scrollbar": "1.5.5",
-    "react": ">=16.8.0",
+    "react": "^18.2.0",
     "react-chartjs-2": "2.11.1",
     "react-datetime": "3.1.1",
-    "react-dom": ">=16.8.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "^5.0.1",
     "reactstrap": "8.7.1",
     "sass": "1.54.0",
+    "sass-loader": "^13.2.0",
     "stream": "^0.0.2",
     "url": "^0.11.0",
     "wagmi": "^0.8.2",
@@ -63,10 +63,6 @@
     "web3": "^1.8.1",
     "web3-provider": "^1.0.0",
     "web3modal": "^1.9.9"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
   },
   "optionalDependencies": {
     "jquery": "3.6.0",
