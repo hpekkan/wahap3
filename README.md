@@ -1,57 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# wahap3
-npm run dev
-=======
-=======
->>>>>>> main
-# wahap3</br>
-npm run dev</br>
+---Finalist of Digiathon 2022---
+
+Team: WAHAP3
+
+Team Members:
+-Muhammed Ata Turhan
+-Hüseyin Pekkan
+-Berkay Yıldız
+-Harun Serkan Metin
+
+DEMO: https://www.youtube.com/watch?v=YEcG7dMGT90
 
 
+Run project on local:
+-npm install --force
+-npm start
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>Sunum NOTLAR(Private)</br>
-içi boş sertifika önleme(sertifika vermek ücretli)</br>
-sertifika al olmayacak</br>
-
-
-<<<<<<< HEAD
->>>>>>> 3cee84ee27e0173501bf420d74662a85800692f3
-=======
->>>>>>> main
