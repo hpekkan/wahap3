@@ -3,10 +3,10 @@
 Team: WAHAP3
  <br></br>
 Team Members:  <br></br>
--Muhammed Ata Turhan 
--Hüseyin Pekkan  
--Berkay Yıldız
--Harun Serkan Metin 
+-Muhammed Ata Turhan  <br></br>
+-Hüseyin Pekkan   <br></br>
+-Berkay Yıldız <br></br>
+-Harun Serkan Metin  <br></br>
  <br></br>
   <br></br>
   ## DEMO VIDEO</br>
