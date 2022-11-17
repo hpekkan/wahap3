@@ -13,7 +13,7 @@
       </br>
 </p>
 
-## <p align="center">DEMO VIDEO</p></br>
+## <p align="center">DEMO VIDEO (Click below image to see video)</p></br>
   
 [<img align="center" src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" width="100%">](https://www.youtube.com/watch?v=YEcG7dMGT90 "Demo Video")
      
