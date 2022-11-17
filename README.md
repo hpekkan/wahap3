@@ -14,7 +14,7 @@
 </p>
  
   ## <p align="center">DEMO VIDEO</p></br>
-<p align="center" ><img src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" alt="Demo Video" href="https://www.youtube.com/watch?v=YEcG7dMGT90" target="_blank"></br></br>  
+<p align="center" ><a href="https://www.youtube.com/watch?v=YEcG7dMGT90" target="_blank"><img src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" alt="Demo Video" target="_blank"></a></br></br>  
 
 <p align="center">
     Run project on local:  </br>
