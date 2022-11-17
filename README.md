@@ -12,9 +12,12 @@
      Harun Serkan Metin Computer- Engineering -@HarunSMetin</br>
       </br>
 </p>
- 
-  ## <p align="center">DEMO VIDEO</p></br>
-<p align="center" ><a href="https://www.youtube.com/watch?v=YEcG7dMGT90" target="_blank"><img src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" alt="Demo Video" target="_blank"></a></br></br>  
+
+## <p align="center">DEMO VIDEO</p></br>
+  
+[<img align="center" src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" width="100%">](https://www.youtube.com/watch?v=YEcG7dMGT90 "Demo Video")
+     
+
 
 <p align="center">
     Run project on local:  </br>
