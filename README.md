@@ -15,9 +15,11 @@
 
 ## <p align="center">DEMO VIDEO (Click below image to see demo)</p></br>
   
+<div align="center">
 
 [<img align="center" src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" width="55%">](https://www.youtube.com/watch?v=YEcG7dMGT90 "Demo Video")
      
+</div>
 
 
 <p align="center">
