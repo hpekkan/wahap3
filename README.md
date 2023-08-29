@@ -16,8 +16,10 @@
 ## <p align="center">DEMO VIDEO (Click below image to see demo)</p></br>
   
 <div align="center">
-
-[<img align="center" src="https://img.youtube.com/vi/YEcG7dMGT90/0.jpg" width="55%">](https://www.youtube.com/watch?v=YEcG7dMGT90 "Demo Video")
+     
+https://github.com/hpekkan/wahap3/assets/75019129/fc69042c-4e52-4925-a385-ad7795e60e52
+     
+If the above video player is not working -> https://www.youtube.com/watch?v=YEcG7dMGT90 
      
 </div>
 
